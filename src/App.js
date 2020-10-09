@@ -10,17 +10,6 @@ const App = () => {
     const [data, setData] = useState({})
 
 
-    // state = {
-    //     data: {},
-    //     country : ''
-    // }
-    
-    // async componentDidMount() {
-    //     const fetchedData = await fethcData();
-
-    //     this.setState({ data: fetchedData });
-    // }
-
      useEffect(() => {
        async function fetchedData() {
           const fetch = await fethcData();
@@ -32,9 +21,7 @@ const App = () => {
     const handleCountryChange = async (country) => {
         const fetchedData = await fethcData(country);
        
-        // this.setState({
-        //     data: fetchedData, country: country
-        // })
+       
 
         setData(fetchedData)
         setCountry(country)
